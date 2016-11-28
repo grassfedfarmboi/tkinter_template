@@ -134,7 +134,10 @@ class GUI(ttk.Frame):
         self.root.grid_columnconfigure(0, weight=1)
         self.root.grid_rowconfigure(0, weight=1)
         self.root.option_add('*tearOff', 'FALSE') # Disables ability to tear menu bar into own window
-
+        
+        # Menu Bar
+        self.menubar = Menubar(self.root)
+        
         # Create Widgets
         self.btn = ttk.Button(self, text='Open Window', command=self.openwindow)
 
